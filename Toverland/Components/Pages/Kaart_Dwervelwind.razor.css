@@ -1,0 +1,162 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    max-width: 375px;
+    max-height: 812px;
+    box-sizing: border-box;
+}
+
+.body {
+    width: 375px;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lijst_sectie {
+    width: 375px;
+    height: 491px;
+    background-image: url("/images/TOVERLAND_MAP.png");
+    background-repeat: no-repeat;
+}
+
+.top_blok {
+    width: 375px;
+    height: 170px;
+    background-color: #2E2D53;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.terug_knop, .navigatie_knop {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terug_knop {
+    background-color: white;
+}
+
+.navigatie_knop {
+    background-color: #de3c19;
+}
+
+.nav_blok {
+    width: 375px;
+    height: 151px;
+    background-color: #2E2D53;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.kaart_knop, .lijst_knop, .info_knop, .ticket_knop {
+    width: 93.75px;
+    height: 151px;
+    background-color: #2E2D53;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.kaart_icon, .lijst_icon, .info_icon, .ticket_icon {
+    width: 50px;
+    height: 50px;
+}
+/* Aparte attractie-bolletjes hieronder: */
+.cocobolo_stip {
+    position: absolute;
+    margin-left: 305px;
+    margin-top: 320px;
+}
+
+.dwervelwind_stip {
+    position: absolute;
+    margin-left: 315px;
+    margin-top: 180px;
+}
+
+.merlinsquest_stip {
+    position: absolute;
+    margin-left: 240px;
+    margin-top: 160px;
+}
+
+.pixarus_stip {
+    position: absolute;
+    margin-left: 145px;
+    margin-top: 200px;
+}
+
+.waterdwarfalley_stip {
+    position: absolute;
+    margin-left: 65px;
+    margin-top: 145px;
+}
+
+.spirello_stip {
+    position: absolute;
+    margin-left: 284px;
+    margin-top: 256px;
+}
+
+.cocobolo_titel, .dwervelwind_titel, .merlinsquest_titel, .pixarus_titel, .spirello_titel {
+    font-size: 28px;
+    color: black;
+    font-family: "Berkshire Swash", serif;
+    -webkit-text-stroke: 0.25px white;
+}
+
+.waterdwarfalley_titel {
+    font-size: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    font-family: "Berkshire Swash", serif;
+    -webkit-text-stroke: 0.25px white;
+}
+
+.attractie_subtekst {
+    font-size: 16px;
+    color: #4240A6;
+    font-family: "Berkshire Swash", serif;
+    -webkit-text-stroke: 0.10px white;
+    display: flex;
+    flex-direction: column;
+}
+
+.groene_stip, .oranje_stip, .rode_stip, .blauwe_stip {
+    margin-right: 2%;
+    margin-bottom: 20%;
+}
+
+.attracties_opties > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    background-color: #FFFAF8;
+    color: white;
+    width: 375px;
+    height: 130px;
+    position: absolute;
+    margin-top: 361px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
