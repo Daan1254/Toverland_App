@@ -10,13 +10,14 @@
 </head>
 <body>
     <div class="top_blok">
-        <button class="terug_knop">
-            <img src="/images/TERUG_KNOP.png" alt="Terug_Knop" class="terug_knop" />
-        </button>
+        <a class="terug_knop_klas" href="/Info">
+            <button class="terug_knop">
+                <img src="/images/TERUG_KNOP.png" alt="Terug_Knop" class="terug_knop" />
+            </button>
+        </a>
         <img src="/images/BOVENSTUK.png" alt="Logo" class="logo" />
-        <button class="navigatie_knop">
-            <img src="/images/NAVIGATIE_KNOP.png" alt="Navigatie_Knop" class="navigatie_knop" />
-        </button>
+        <div class="navigatie_knop">
+        </div>
     </div>
 
     <div class="lijst_sectie">
@@ -48,7 +49,7 @@
     </div>
 
     <div class="nav_blok">
-        <button class="kaart_knop">
+        <button class="kaart_knop" onclick="navigateTo('Kaart')">
             <div class="knop_plaatje">
                 <img src="/images/KAART_ICON.png" alt="Kaart_Icon" class="kaart_icon" />
             </div>
@@ -56,7 +57,7 @@
                 <p><strong>Kaart</strong></p>
             </div>
         </button>
-        <button class="lijst_knop">
+        <button class="lijst_knop" onclick="navigateTo('Lijst')">
             <div class="knop_plaatje">
                 <img src="/images/LIJST_ICON.png" alt="Lijst_Icon" class="lijst_icon" />
             </div>
@@ -64,7 +65,7 @@
                 <p><strong>Lijst</strong></p>
             </div>
         </button>
-        <button class="info_knop">
+        <button class="info_knop" onclick="navigateTo('Info')">
             <div class="knop_plaatje">
                 <img src="/images/INFO_ICON.png" alt="Info_Icon" class="info_icon" />
             </div>
@@ -72,7 +73,7 @@
                 <p><strong>Info</strong></p>
             </div>
         </button>
-        <button class="ticket_knop">
+        <button class="ticket_knop" onclick="navigateTo('Tickets')">
             <div class="knop_plaatje">
                 <img src="/images/TICKET_ICON.png" alt="Ticket_Icon" class="ticket_icon" />
             </div>
@@ -81,5 +82,12 @@
             </div>
         </button>
     </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = `/${page}`;
+        }
+    </script>
+
 </body>
 </html>

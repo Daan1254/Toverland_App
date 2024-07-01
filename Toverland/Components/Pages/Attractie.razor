@@ -1,0 +1,139 @@
+﻿@page "/{Id:int}"
+@using Toverland.Data
+@using Toverland.Data.Models
+@inject ApiService ApiService
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixarus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+@if (facility == null)
+{
+    <h1>Loading...</h1>
+}
+else
+{
+    <div class="top_blok">
+        <a class="terug_knop_klas" href="/Lijst">
+            <button class="terug_knop">
+                <img src="/images/TERUG_KNOP.png" alt="Terug_Knop" class="terug_knop"/>
+            </button>
+        </a>
+        <img src="/images/BOVENSTUK.png" alt="Logo" class="logo"/>
+        <a class="navigatie_knop_klas" onclick="navigateTo('Kaart/' + @facility.Id)">
+            <button class="navigatie_knop">
+                <img src="/images/NAVIGATIE_KNOP.png" alt="Navigatie_Knop" class="navigatie_knop"/>
+            </button>
+        </a>
+    </div>
+    <div class="facility_sectie" style="@backgroundImageStyle">
+        <div class="attractie_titel">
+            <h1 class="pixarus_titel">@facility.Title</h1>
+            @if (facility.State == State.Open)
+            {
+                <img src="/images/GROENE_STIP.png" alt="Groene_Stip" class="groene_stip"/>
+            } else if (facility.State == State.Closed)
+            {
+                <img src="/images/RODE_STIP.png" alt="Rode_Stip" class="rode_stip" />
+            } else if (facility.State == State.Maintenance)
+            {
+                <img src="/images/ORANJE_STIP.png" alt="Oranje_Stip" class="oranje_stip" />
+            }
+        </div>
+    
+        <div class="attractie_subtekst">
+            <p class="pixarus_subtekst">@facility.SubTitle</p>
+            <p class="pixarus_subtekst">±@facility.WaitTime minuten</p>
+        </div>
+    
+        <a class="attractie_restricties">
+            <img src="/images/P_RESTRICTIES.png" alt="P_Restricties" class="p_restricties"/>
+        </a>
+    
+        <div class="attractie_descriptie">
+            <p class="pixarus_descriptietekst">
+                @facility.Description
+            </p>
+        </div>
+    
+        <div class="attractie_meldingen">
+            <button class="pixarus_meldingen_button">Meldingen aanzetten</button>
+        </div>
+    </div>
+}
+
+
+<div class="nav_blok">
+    <button class="kaart_knop" onclick="navigateTo('Kaart')">
+        <div class="knop_plaatje">
+            <img src="/images/KAART_ICON.png" alt="Kaart_Icon" class="kaart_icon"/>
+        </div>
+        <div class="knop_titel">
+            <p><strong>Kaart</strong></p>
+        </div>
+    </button>
+    <button class="lijst_knop" onclick="navigateTo('Lijst')">
+        <div class="knop_plaatje">
+            <img src="/images/LIJST_ICON.png" alt="Lijst_Icon" class="lijst_icon"/>
+        </div>
+        <div class="knop_titel">
+            <p><strong>Lijst</strong></p>
+        </div>
+    </button>
+    <button class="info_knop" onclick="navigateTo('Info')">
+        <div class="knop_plaatje">
+            <img src="/images/INFO_ICON.png" alt="Info_Icon" class="info_icon"/>
+        </div>
+        <div class="knop_titel">
+            <p><strong>Info</strong></p>
+        </div>
+    </button>
+    <button class="ticket_knop" onclick="navigateTo('Tickets')">
+        <div class="knop_plaatje">
+            <img src="/images/TICKET_ICON.png" alt="Ticket_Icon" class="ticket_icon"/>
+        </div>
+        <div class="knop_titel">
+            <p><strong>Tickets</strong></p>
+        </div>
+    </button>
+</div>
+
+<script>
+        function navigateTo(page) {
+            window.location.href = `/${page}`;
+        }
+    </script>
+
+</body>
+</html>
+
+
+@code {
+
+    [Parameter]
+    public int Id { get; set; }
+    
+    private Facility facility;
+    private string backgroundImageStyle;
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        if (Id != null)
+        {
+            facility = await ApiService.GetFacility(Id);
+            SetBackgroundImage(facility.MapUrl);
+        }
+    }
+    
+    private void SetBackgroundImage(string imageUrl)
+    {
+        backgroundImageStyle = $"background-image: url('{imageUrl}');";
+    }
+}

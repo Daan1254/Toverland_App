@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.body {
+body {
     width: 375px;
     height: 812px;
     display: flex;
@@ -37,39 +37,13 @@
     margin-bottom: 40px;
 }
 
-.terug_knop, .navigatie_knop {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.terug_knop {
-    background-color: white;
-}
-
-.navigatie_knop {
-    background-color: #de3c19;
-}
-
 .attractie_titel {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
 }
 
-.tickets_titel {
-    font-size: 43px;
-    color: black;
-    font-family: "Berkshire Swash", serif;
-    -webkit-text-stroke: 0.25px white;
-    margin-right: 50%;
-}
-
-.tickets_opties > div {
+.inlog_opties > div, a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,23 +51,25 @@
 }
 
 .grotere_tekst, .kleinere_tekst {
-    font-family: "Jaqcues Francois", serif;
     color: white;
-    padding: 0 10%;
+    font-family: "Jacques Francois", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
 
 .grotere_tekst {
-    font-size: 25px;
-    margin-top: 10%;
+    font-size: 28px;
 }
 
 .kleinere_tekst {
     font-size: 17px;
-    margin-top: 2%;
 }
 
-.tickets_toevoeg_button, .tickets_vl_button {
-    background-color: #2E2D53;
+a.eerste_button {
+    text-decoration: none;
+}
+
+a.eerste_button button {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -103,11 +79,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
+    margin: 5px 0;
+    font-family: "Inter", sans-serif;
 }
 
-.tickets_vl_button {
-    margin-top: 2%;
+a.eerste_button button {
+    background-color: #3c5984;
+    margin-top: 10%;
 }
 
 .nav_blok {
@@ -121,19 +99,24 @@
     position: relative;
 }
 
-.kaart_knop, .lijst_knop, .info_knop, .ticket_knop {
-    width: 93.75px;
-    height: 151px;
-    background-color: #2E2D53;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
+input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
 }
 
-.kaart_icon, .lijst_icon, .info_icon, .ticket_icon {
-    width: 50px;
-    height: 50px;
+input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
 }

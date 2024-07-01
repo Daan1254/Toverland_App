@@ -51,10 +51,6 @@
     background-color: white;
 }
 
-.navigatie_knop {
-    background-color: #de3c19;
-}
-
 .attractie_titel {
     display: flex;
     flex-direction: column;
@@ -83,12 +79,13 @@
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 14px;
-    width: 290px;
+    width: 305px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 5%;
+    font-family: "Inter", sans-serif;
 }
 
 .eerste_vraag {
@@ -116,6 +113,7 @@
     align-items: center;
     justify-content: center;
     font-size: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 .kaart_icon, .lijst_icon, .info_icon, .ticket_icon {

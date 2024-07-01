@@ -1,4 +1,4 @@
-﻿@page "/"
+﻿@page "/Login_Scherm"
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,20 +15,26 @@
 
     <div class="lijst_sectie">
         <div class="attractie_titel">
-            <h1 class="tickets_titel">Toverland</h1>
-            <div class="tickets_opties">
+            <img src="/images/TOVERLAND_BEGINLOGO.png" alt="Toverland_Beginlogo" class="toverland_beginlogo" />
+            <div class="inlog_opties">
                 <div class="grotere_tekst">
-                    <p><strong>Creëer een account!</strong></p>
+                    <p>Welkom!</p>
                 </div>
                 <div class="kleinere_tekst">
-                    <p>Vul jouw email in om aan te melden.</p>
+                    <p>Vul jouw email in om in te loggen.</p>
                 </div>
-                <div class="eerste_button">
-                    <button class="tickets_toevoeg_button">Voeg tickets toe</button>
-                </div>
-                <div class="tweede_button">
-                    <button class="tickets_vl_button">Aanmelden</button>
-                </div>
+                <form>
+                <input type="email" id="email" name="email" placeholder="E-mailadres">
+                </form>
+                <form>
+                    <input type="password" id="wachtwoord" name="wachtwoord" placeholder="Wachtwoord">
+                </form>
+                <a class="eerste_button" href="/Kaart">
+                    <button class="inloggen_button">Inloggen</button>
+                </a>
+                <a class="kleinere_tekst" href="/">
+                    <p>Heb je geen account? Meld aan.</p>
+                </a>
             </div>
         </div>
     </div>

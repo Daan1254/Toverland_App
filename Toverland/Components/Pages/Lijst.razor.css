@@ -143,9 +143,29 @@
     align-items: center;
     justify-content: center;
     font-size: 10px;
+    font-family: "Inter", sans-serif;
 }
 
 .kaart_icon, .lijst_icon, .info_icon, .ticket_icon {
     width: 50px;
     height: 50px;
 }
+
+.attracties_opties a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    background-color: #FFFAF8;
+    color: white;
+    width: 375px;
+    height: 130px;
+    margin-top: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.attracties_opties a:hover {
+    background-color: #f0f0f0; /* Optioneel: verandering van achtergrondkleur bij hover */
+ }

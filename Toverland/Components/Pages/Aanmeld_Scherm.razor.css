@@ -1,0 +1,115 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    max-width: 375px;
+    max-height: 812px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 375px;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lijst_sectie {
+    width: 100%;
+    height: 491px;
+    background-color: #2E2D53;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_blok {
+    width: 100%;
+    height: 170px;
+    background-color: #2E2D53;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.logo {
+    margin-bottom: 40px;
+}
+
+.attractie_titel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aanmeld_opties > div, a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.grotere_tekst, .kleinere_tekst {
+    color: white;
+    font-family: "Jacques Francois", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.grotere_tekst {
+    font-size: 28px;
+}
+
+.kleinere_tekst {
+    font-size: 17px;
+}
+
+a.eerste_button, a.tweede_button {
+    text-decoration: none;
+}
+
+a.eerste_button button, a.tweede_button button {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 270px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    font-family: "Inter", sans-serif;
+}
+
+a.eerste_button button {
+    background-color: #3c5984;
+    margin-top: 10%;
+}
+
+a.tweede_button button {
+    background-color: #9bacc6;
+}
+
+.nav_blok {
+    width: 100%;
+    height: 151px;
+    background-color: #2E2D53;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}

@@ -1,0 +1,53 @@
+﻿@page "/"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top_blok">
+        <img src="/images/BOVENSTUK.png" alt="Logo" class="logo" />
+    </div>
+
+    <div class="lijst_sectie">
+        <div class="attractie_titel">
+            <img src="/images/TOVERLAND_BEGINLOGO.png" alt="Toverland_Beginlogo" class="toverland_beginlogo" />
+            <div class="aanmeld_opties">
+                <div class="grotere_tekst">
+                    <p>Creëer een account!</p>
+                </div>
+                <div class="kleinere_tekst">
+                    <p>Vul jouw email in om aan te melden.</p>
+                </div>
+                <form>
+                <input type="email" id="email" name="email" placeholder="E-mailadres">
+                </form>
+                <a class="eerste_button" href="/Kaart">
+                    <button class="aanmelden_button">Aanmelden</button>
+                </a>
+                <img src="/images/DIVIDER.png" alt="Divider" class="divider" />
+                <a class="tweede_button" href="/Kaart">
+                    <button class="doorgaan_button">Ga door zonder account</button>
+                </a>
+                <a class="kleinere_tekst" href="/Login_Scherm">
+                    <p>Heb je al een account? Log in.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav_blok">
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = `/${page}`;
+        }
+    </script>
+
+</body>
+</html>
