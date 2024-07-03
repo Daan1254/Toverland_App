@@ -115,14 +115,15 @@
 }
 
 .nav_blok {
-    width: 375px;
+    width: 375px;   
     height: 151px;
     background-color: #2E2D53;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    position: relative;
+    /*position: sticky;*/
+    /*bottom: 0;*/
 }
 
 .kaart_knop, .lijst_knop, .info_knop, .ticket_knop {

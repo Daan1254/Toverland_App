@@ -23,7 +23,7 @@ public class Facility
 
     public string Title { get; private set; }
 
-    public int? WaitTime { get; set; }
+    public int? WaitTime { get; private set; }
 
     public string SubTitle { get; private set; }
     
@@ -31,11 +31,11 @@ public class Facility
     
     public string ImageUrl { get; private set; }
 
-    public string MapUrl { get; set; }
+    public string MapUrl { get; private set; }
     
-    public State State { get; set; }
+    public State State { get; private set; }
     
-    public FacilityType Type { get; set; }
+    public FacilityType Type { get; private set; }
 
 
     public Facility(string title, int id, string subTitle, string description, string imageUrl, State state)

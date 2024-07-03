@@ -57,7 +57,7 @@
         {
             @if (facility.Type == FacilityType.FOOD_DRINKS)
             {
-                <a class="spirello_optie" href="Spirello_Attractie">
+                <a class="spirello_optie" @onclick='() => NavigateTo($"{facility.Id}")'>
                     <img src="/images/MINI_SPIRELLO.png" alt="Mini_Spirello" class="mini_spirello" />
                     <div class="attractie_titel">
                         <h1 class="spirello_titel">@facility.Title</h1>

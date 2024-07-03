@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixarus</title>
+    <title>Attractie</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -119,7 +119,7 @@ else
     [Parameter]
     public int Id { get; set; }
     
-    private Facility facility;
+    private Facility? facility;
     private string backgroundImageStyle;
 
     protected override async Task OnInitializedAsync()
@@ -128,7 +128,7 @@ else
         if (Id != null)
         {
             facility = await ApiService.GetFacility(Id);
-            SetBackgroundImage(facility.MapUrl);
+            SetBackgroundImage(facility!.MapUrl);
         }
     }
     
